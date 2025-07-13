@@ -1,0 +1,6 @@
+
+path_to_checkpoints: '../checkpoint_balanced_not_same_test_set'
+
+evaluation_result_path: '../data/results_balanced_not_same_test_set'
+
+model_name: 'res_tf' # 'top10nn' 'vgg_lstm'

@@ -1,0 +1,19 @@
+defaults:
+  - _self_
+  - dataset: seen_d1
+
+smac:
+  n_trials: 132
+  walltime_limit: 3600
+
+  min_budget: 5
+  max_budget: 50
+
+  use_default_config: False
+  deterministic: True
+
+  random_state: 0
+
+  output_directory: "/home/malte.kuhlmann/youngs-modulus/logs/smac_output"
+  n_workers: 1
+

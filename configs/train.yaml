@@ -1,0 +1,25 @@
+defaults:
+  - _self_
+  - dataset: seen_d4
+  
+
+settings:
+  model_name: "res_tf" # res_tf, vgg_lstm, top10nn
+  checkpoint_dir: "../checkpoint/tests"
+  max_epochs: 200
+  precision: "32-true"
+  fold: 0
+  use_optimized_architecture: True
+  smac_optimization_dir: "../logs/smac_output_unbalanced"
+
+  use_optimized_balancing_threshold: True
+  threshold_smac_optimization_dir: "../logs/smac_output_threshold/balanced_validation_random_state_0"
+
+  use_checkpointing: True
+  use_early_stopping: True
+
+  worker: 10
+  random_state: 0
+logger:
+  save_dir: "../logs"
+  project: "gelsight_youngs_modulus"
