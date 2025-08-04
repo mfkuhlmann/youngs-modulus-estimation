@@ -54,6 +54,8 @@ The trained models can be evaluated on the second dataset using \
 
 The scatter plot can be generated using \
 `python src\plot_all.py`
+and
+`python src\create_scatter_plot.py`.
 The checkpoints used for this need to be manually set inside the file directly
 
 The box plot can be generated using \
@@ -61,5 +63,5 @@ The box plot can be generated using \
 This script uses a manually compiled file -> will be fixed in another version
 
 The box plot with rolling window can be generated using \
-`python src\create_scatter_plot.py`
+`python src\create_box_plot_rolling_window.py`
 The checkpoints used for this need to be manually set inside the file directly
