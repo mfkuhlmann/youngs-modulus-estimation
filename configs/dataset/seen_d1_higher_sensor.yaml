@@ -1,0 +1,57 @@
+defaults:
+  - _self_
+  - model/res_tf: default
+  - model/vgg_lstm: default
+  - model/top10nn: default
+
+data_dir: '../data'
+training_data_folder: 'gelsight_youngs_modulus_dataset'
+sample_type: 'random'
+n_channels: 3
+n_frames: 3
+img_size: [250, 350] 
+img_style: 'RGB'
+
+n_splits: 10
+use_cross_validation: False
+same_test_set: False
+val_on_seen_objects: True 
+
+use_force: True
+use_width: True
+use_estimations: True
+
+use_transformations: True 
+use_width_transforms: True 
+
+use_log_normalization: True
+compliance: 'higher_sensor'
+
+balance_dataset: True
+balance_position: 'after_isolated_lower_memory'
+balance_bucket: 9
+balance_threshold: 0.5
+balance_test_set: False
+balance_validation_set: True
+
+full_dataset_undersample: False
+full_dataset_undersample_amount: 1020
+
+use_markers: "both" 
+rubber_only: False
+remove_paper: True
+exclude: [
+  'playdoh',
+  'silly_puty',
+  'blue_sponge_dry',
+  'blue_sponge_wet',
+  'apple',
+  'orange',
+  'strawberry',
+  'ripe_banana',
+  'unripe_banana',
+  'lacrosse_ball',
+  'baseball',
+  'racquet_ball',
+  'tennis_ball'
+] # Objects with unknown Ground Truth

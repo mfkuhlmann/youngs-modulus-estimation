@@ -1,0 +1,19 @@
+defaults:
+  - _self_
+  - dataset: unseen_d4
+  
+
+settings:
+  model_name: "vgg_lstm" # res_tf, vgg_lstm, top10nn
+  checkpoint_dir: "../checkpoint"
+  max_epochs: 1000
+  precision: "32-true"
+  fold: 1
+  use_optimized_architecture: False
+  smac_optimization_dir: "../logs/smac_output"
+  random_state: 0
+  worker: 10
+
+logger:
+  save_dir: "../logs"
+  project: "youngs_new_ds"

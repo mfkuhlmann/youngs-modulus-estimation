@@ -1,0 +1,28 @@
+gamma: 0.975
+learning_rate: 0.0001
+lr_step_size: 1
+random_state: 42
+batch_size: 32
+use_fair_loss: False
+
+
+# Model Architecture
+
+## Dropout
+video_dropout: 0.1
+force_dropout: 0.1 # Is not used
+width_dropout: 0.1 # is not used
+est_dropout: 0.1
+decoder_dropout: 0.1
+
+## Feature Sizes
+fwe_feature_size: 32 # Feature size for force, width. Only one fully connected layer
+decoder_size: [512, 512, 128] 
+est_decoder_size: [64, 64, 32] 
+decoder_output_size: 3
+
+## Video Transformer
+layer: 5
+head: 8
+embedding_dim: 512
+output_dim: 512

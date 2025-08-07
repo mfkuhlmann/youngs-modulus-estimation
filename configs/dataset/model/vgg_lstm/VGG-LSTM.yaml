@@ -1,0 +1,17 @@
+gamma: 0.97974
+learning_rate: 3e-4
+batch_size: 16
+lr_step_size: 1 
+random_state: 42 
+
+# Model Architecture
+## Dropout
+lstm_dropout: 0.2
+## Feature Sizes 
+input_dim: 4096 # VGG16 fc7 do not change
+hidden_dim: 256
+
+scalar1_dim: 32
+scalar2_dim: 32       
+scalar3_dim: 32       
+scalar4_dim: 32
