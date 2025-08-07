@@ -3,15 +3,20 @@
 This repository contains the supplementary code of the paper [Advances in Compliance Detection: Novel Models Using Vision-Based Tactile Sensors](https://arxiv.org/abs/2506.14980)
 
 ## Description
-In this project, we built two models, LSTM-based and Transformer-based, to predict the Young’s modulus of contact objects from the RGB images of the Gelsight sensor.
+In this project, we built two models, LSTM-based (VGG-LSTM) and Transformer-based (Res-Tf), to predict the Young’s modulus of contact objects from the RGB images of the Gelsight sensor.
+
+Our models perform well, when compared against the baseline:
+![An image that compares the performance of Top10NN, Res-Tf, and VGG-LSTM](./figures/six_models_comparison.svg)
 
 ## Installation
-Install the requirments environment: `pip3 install -r requirements.txt`
+1. Create an Python 3.10 environment.
+
+2. Install the requirments environment: `pip3 install -r requirements.txt`
 
 ## Dataset
 The datasets can be downloaded from [here](https://huggingface.co/datasets/mburgjr/GelSight-YoungsModulus) and [here](https://people.csail.mit.edu/yuan_wz/hardnessdataset/).
 
-They are from from the paper [Learning Object Compliance via Young’s Modulus from Single Grasps using Camera-Based Tactile Sensors](https://arxiv.org/pdf/2406.15304) and [Shape-independent hardness estimation using deep learning and a gelsight tactile sensor](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7989116url) respectively
+They are from from the paper [Learning Object Compliance via Young’s Modulus from Single Grasps using Camera-Based Tactile Sensors](https://arxiv.org/pdf/2406.15304) and [Shape-independent hardness estimation using deep learning and a gelsight tactile sensor](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7989116url) respectively.
 
 The specific labels for the materials of the first dataset can be found in file `dataset_objects_and_compliance.csv`
 
@@ -53,14 +58,10 @@ The trained models can be evaluated on the second dataset using \
 `python src\evaluate_folds_new_dataset.py`
 
 The scatter plot can be generated using \
-`python src\plot_all.py`
+`python src\create_plot_all.py`
 and
 `python src\create_scatter_plot.py`.
 The checkpoints used for this need to be manually set inside the file directly
-
-The box plot can be generated using \
-`python src\create_box_plot.py` \
-This script uses a manually compiled file -> will be fixed in another version
 
 The box plot with rolling window can be generated using \
 `python src\create_box_plot_rolling_window.py`

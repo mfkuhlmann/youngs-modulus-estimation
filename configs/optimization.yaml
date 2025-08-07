@@ -14,6 +14,6 @@ smac:
 
   random_state: 0
 
-  output_directory: "/home/malte.kuhlmann/youngs-modulus/logs/smac_output"
+  output_directory: "../logs/smac_output"
   n_workers: 1
 

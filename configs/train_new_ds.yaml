@@ -16,4 +16,4 @@ settings:
 
 logger:
   save_dir: "../logs"
-  project: "youngs_NEWDS"
+  project: "youngs_new_ds"

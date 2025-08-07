@@ -4,7 +4,7 @@ defaults:
   - model/vgg_lstm: default
   - model/top10nn: default
 
-data_dir: '/home/malte.kuhlmann/youngs-modulus/data' 
+data_dir: '../data' 
 training_data_folder: 'gelsight_youngs_modulus_dataset'
 sample_type: 'shape_material'
 n_channels: 3
